@@ -43,5 +43,23 @@ class WorkerWindow: UIViewController {
         return letWorkerButton
     }
     
+    func createFireDialog()-> (Int, String) {
+        var reasonNumber = 0
+        var enteredWorkerName: String = ""
+        let alert = UIAlertController(title: "Fire worker", message: "Choose reason to fire", preferredStyle: .alert)
+        alert.addTextField { (workerName) in workerName.placeholder = "Worker full name"
+            enteredWorkerName =  workerName.text ?? ""
+        }
+         let workerWill = UIAlertAction(title: "Worker Will", style: .cancel) { (_) in
+            reasonNumber = 1
+            }
+         alert.addAction(workerWill)
+        let violation = UIAlertAction(title: "Violation", style: .cancel) { (_) in
+            reasonNumber = 2
+        }
+        alert.addAction(violation)
+         present(alert, animated: true, completion: nil)
+        return (reasonNumber, enteredWorkerName)
+    }
 
 }
