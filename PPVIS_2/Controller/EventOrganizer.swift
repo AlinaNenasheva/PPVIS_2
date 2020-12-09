@@ -9,23 +9,23 @@ import Foundation
 
 class EventOrganizer {
     let amusementPark: AmusementPark
-    let mainMenu: MainMenuWindow
+    let authorizationWindow: AuthorizationWindow
     
-    init(amusementPark: AmusementPark, mainMenu: MainMenuWindow) {
+    init(amusementPark: AmusementPark, authorizationWindow: AuthorizationWindow) {
         self.amusementPark = amusementPark
-        self.mainMenu = mainMenu
+        self.authorizationWindow = authorizationWindow
         execute()
     }
     
     func execute() {
-        mainMenu.eventWindow.setCreateButtonHandler(setEvent)
+        authorizationWindow.mainMenuWindow.eventWindow.setCreateButtonHandler(setEvent)
 //        mainMenu.eventWindow.getCreateButton().addTarget(self, action: #selector(setEvent), for: .touchUpInside)
     }
     
     @objc func setEvent(){
-        let date = mainMenu.eventWindow.getDateFromDatePicker()
-        let numberOfGuests = mainMenu.eventWindow.getNumberOfGuestsButton()
-        let menu = mainMenu.eventWindow.getTextView()
+        let date = authorizationWindow.mainMenuWindow.eventWindow.getDateFromDatePicker()
+        let numberOfGuests = authorizationWindow.mainMenuWindow.eventWindow.getNumberOfGuestsButton()
+        let menu = authorizationWindow.mainMenuWindow.eventWindow.getTextView()
         let event = Event(date: date, menu: menu, numberOfGuests: numberOfGuests)
         amusementPark.events.append(event)
     }

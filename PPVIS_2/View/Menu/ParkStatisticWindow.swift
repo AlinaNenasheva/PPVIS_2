@@ -18,7 +18,15 @@ class ParkStatisticWindow: UIViewController {
     }
 
     func setLabels(dayProfit: Double, monthProfit: Double) {
-        dayProfitLabel.text = "Sum for day: \(dayProfit)"
-        monthProfitLabel.text = "Sum for month \(monthProfit)"
+        guard dayProfitLabel?.text != nil else {
+              print("The label is empty")
+            return
+        }
+        guard monthProfitLabel?.text != nil else {
+              print("The label is empty")
+            return
+        }
+//        dayProfitLabel.text = "Sum for day: \(dayProfit)"
+//        monthProfitLabel.text = "Sum for month \(monthProfit)"
     }
 }

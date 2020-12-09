@@ -30,9 +30,11 @@ class Verifyer {
         return "password"
     }
     
-    @objc func verifyPasswordForEntrance() {
-        let inputLogin = authorizationWindow?.getLoginTextField()
-        let inputPassword = authorizationWindow?.getPasswordTextField()
+    func verifyPasswordForEntrance() {
+        let inputLogin = authorizationWindow?.getLogin()
+        print(inputLogin)
+        let inputPassword = authorizationWindow?.getPassword()
+        print(inputPassword)
         if getLogin() == inputLogin &&  getPassword() == inputPassword {
             authorizationWindow?.presentMainMenu()
         }

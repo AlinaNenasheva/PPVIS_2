@@ -16,11 +16,11 @@ class AuthorizationWindow: UIViewController {
         passwordTextField.isSecureTextEntry = true
     }
     
-    func getPasswordTextField()-> String {
+    func getPassword()-> String {
         return passwordTextField.text ?? ""
     }
     
-    func getLoginTextField()-> String {
+    func getLogin()-> String {
         return loginTextField.text ?? ""
     }
     

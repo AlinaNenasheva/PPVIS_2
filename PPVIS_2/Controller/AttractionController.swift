@@ -9,20 +9,20 @@ import Foundation
 
 class AttractionController {
     let amusementPark: AmusementPark
-    let mainMenuWindow: MainMenuWindow
+    let authorizationWindow: AuthorizationWindow
     let verifyer: Verifyer
     
-    init(amusementPark: AmusementPark, mainMenuWindow: MainMenuWindow, verifyer: Verifyer) {
+    init(amusementPark: AmusementPark, authorizationWindow: AuthorizationWindow, verifyer: Verifyer) {
         self.amusementPark = amusementPark
-        self.mainMenuWindow = mainMenuWindow
+        self.authorizationWindow = authorizationWindow
         self.verifyer = verifyer
     }
     
     @objc func changePrice() {
-        let infoFromChangePriceDialog = mainMenuWindow.attractionWindow.createChangePriceDialog()
+        let infoFromChangePriceDialog = authorizationWindow.mainMenuWindow.attractionWindow.createChangePriceDialog()
         let price = infoFromChangePriceDialog.1
         let attractionId = infoFromChangePriceDialog.0
-        let authoInfo = mainMenuWindow.attractionWindow.createVerifyDialog()
+        let authoInfo = authorizationWindow.mainMenuWindow.attractionWindow.createVerifyDialog()
         let login = authoInfo.0
         let password = authoInfo.1
         if verifyer.verifyPassword(login: login, password: password) {
@@ -49,7 +49,7 @@ class AttractionController {
     }
     
     @objc func openAttraction() {
-        let attractionId = mainMenuWindow.attractionWindow.createOpenDialog()
+        let attractionId = authorizationWindow.mainMenuWindow.attractionWindow.createOpenDialog()
         for attraction in amusementPark.attractions {
             if attraction.id == attractionId {
                 attraction.opened = true
@@ -59,10 +59,10 @@ class AttractionController {
     }
     
     @objc func determinateReason () {
-        let infoFromCloseDIalog = mainMenuWindow.attractionWindow.createCloseDialog()
+        let infoFromCloseDIalog = authorizationWindow.mainMenuWindow.attractionWindow.createCloseDialog()
         let reason = infoFromCloseDIalog.0
         let attractionId = infoFromCloseDIalog.1
-        let authoInfo = mainMenuWindow.attractionWindow.createVerifyDialog()
+        let authoInfo = authorizationWindow.mainMenuWindow.attractionWindow.createVerifyDialog()
         let login = authoInfo.0
         let password = authoInfo.1
         if  reason == 1 {
@@ -76,7 +76,7 @@ class AttractionController {
     
     
     @objc func updateSoldTicketsAndPassibility() {
-        let attractionId = mainMenuWindow.attractionWindow.createAddTicketsDialog()
+        let attractionId = authorizationWindow.mainMenuWindow.attractionWindow.createAddTicketsDialog()
         for attraction in amusementPark.attractions {
             if attraction.id == attractionId {
                 attraction.soldTicketsForDay += 1
@@ -88,7 +88,7 @@ class AttractionController {
     }
     
     @objc func analyzePopularity(){
-        let attractionId = mainMenuWindow.attractionWindow.createAnalysisDialog()
+        let attractionId = authorizationWindow.mainMenuWindow.attractionWindow.createAnalysisDialog()
         var analysisInfo = ""
         for attraction in amusementPark.attractions {
             if attraction.id == attractionId {
@@ -104,9 +104,9 @@ class AttractionController {
                 }
             }
             if isMinimalPassibilityAndRate(attractionRate: attraction.rate, attractionPassibility: Double(attraction.passibility)) {
-                mainMenuWindow.attractionWindow.showAnalysisDialogForUnprofitable(message: analysisInfo)
+                authorizationWindow.mainMenuWindow.attractionWindow.showAnalysisDialogForUnprofitable(message: analysisInfo)
             } else {
-                mainMenuWindow.attractionWindow.showAnalysisDialog(message: analysisInfo)
+                authorizationWindow.mainMenuWindow.attractionWindow.showAnalysisDialog(message: analysisInfo)
             }
         }
     }
@@ -144,41 +144,41 @@ class AttractionController {
     }
     
     @objc func getStatistic() {
-        let attractionId = mainMenuWindow.attractionWindow.createStatisticDialog()
+        let attractionId = authorizationWindow.mainMenuWindow.attractionWindow.createStatisticDialog()
         for attraction in amusementPark.attractions {
             if attraction.id == attractionId {
-                mainMenuWindow.attractionWindow.showStatisticDialog(dayIncome: Double(attraction.soldTicketsForDay) * attraction.price, monthIncome: Double(attraction.soldTiketsForMonth) * attraction.price)
+                authorizationWindow.mainMenuWindow.attractionWindow.showStatisticDialog(dayIncome: Double(attraction.soldTicketsForDay) * attraction.price, monthIncome: Double(attraction.soldTiketsForMonth) * attraction.price)
             }
         }
     }
     
     @objc func addAttraction() {
-        let attractionId = mainMenuWindow.addRecordWindow.getAttractionId()
-        let temperature = mainMenuWindow.addRecordWindow.getTemperature()
-        let windSpeed = mainMenuWindow.addRecordWindow.getWindSpeed()
-        let precipitation = mainMenuWindow.addRecordWindow.getPrecipitation()
-        let price = mainMenuWindow.addRecordWindow.getPrice()
-        let rate = mainMenuWindow.addRecordWindow.getRate()
-        let dateofStart = mainMenuWindow.addRecordWindow.getAttractionStartWorkingHours()
-        let dateOfEnd =  mainMenuWindow.addRecordWindow.getAttractionEndWorkingHours()
+        let attractionId = authorizationWindow.mainMenuWindow.addRecordWindow.getAttractionId()
+        let temperature = authorizationWindow.mainMenuWindow.addRecordWindow.getTemperature()
+        let windSpeed = authorizationWindow.mainMenuWindow.addRecordWindow.getWindSpeed()
+        let precipitation = authorizationWindow.mainMenuWindow.addRecordWindow.getPrecipitation()
+        let price = authorizationWindow.mainMenuWindow.addRecordWindow.getPrice()
+        let rate = authorizationWindow.mainMenuWindow.addRecordWindow.getRate()
+        let dateofStart = authorizationWindow.mainMenuWindow.addRecordWindow.getAttractionStartWorkingHours()
+        let dateOfEnd =  authorizationWindow.mainMenuWindow.addRecordWindow.getAttractionEndWorkingHours()
         let attraction = Attraction(id: attractionId, weatherCondition: WeatherCondition(temperature: temperature, windSpeed: windSpeed, precipitation: precipitation), price: price, rate: rate, workingHours: WorkingHours(dateOfStart: dateofStart, dateOfEnd: dateOfEnd))
         amusementPark.attractions.append(attraction)
     }
     
     func execute() {
-        mainMenuWindow.attractionWindow.setCloseButtonHandler(determinateReason)
+        authorizationWindow.mainMenuWindow.attractionWindow.setCloseButtonHandler(determinateReason)
 //        mainMenuWindow.attractionWindow.getCloseButton().addTarget(self, action: #selector(determinateReason), for: .touchUpInside)
-        mainMenuWindow.attractionWindow.setOpenButtonHandler(openAttraction)
-        mainMenuWindow.attractionWindow.setAnalyzeButtonHandler(analyzePopularity)
-        mainMenuWindow.attractionWindow.setStatisticeButtonHandler(getStatistic)
-        mainMenuWindow.attractionWindow.setAddTicketsButtonHandler(updateSoldTicketsAndPassibility)
-        mainMenuWindow.attractionWindow.setoChangePriceButtonHandler(changePrice)
+        authorizationWindow.mainMenuWindow.attractionWindow.setOpenButtonHandler(openAttraction)
+        authorizationWindow.mainMenuWindow.attractionWindow.setAnalyzeButtonHandler(analyzePopularity)
+        authorizationWindow.mainMenuWindow.attractionWindow.setStatisticeButtonHandler(getStatistic)
+        authorizationWindow.mainMenuWindow.attractionWindow.setAddTicketsButtonHandler(updateSoldTicketsAndPassibility)
+        authorizationWindow.mainMenuWindow.attractionWindow.setoChangePriceButtonHandler(changePrice)
 //        mainMenuWindow.attractionWindow.getOpenButton().addTarget(self, action: #selector(openAttraction), for: .touchUpInside)
 //        mainMenuWindow.attractionWindow.getAnalyzePopularityButton().addTarget(self, action: #selector(analyzePopularity), for: .touchUpInside)
 //        mainMenuWindow.attractionWindow.getStatisticButton().addTarget(self, action: #selector(getStatistic), for: .touchUpInside)
 //        mainMenuWindow.attractionWindow.getChangePriceButton().addTarget(self, action: #selector(changePrice), for: .touchUpInside)
 //        mainMenuWindow.attractionWindow.getAddTicketsButton().addTarget(self, action: #selector(updateSoldTicketsAndPassibility), for: .touchUpInside)
-        mainMenuWindow.addRecordWindow.setAddAttractionButtonHandler(addAttraction)
+        authorizationWindow.mainMenuWindow.addRecordWindow.setAddAttractionButtonHandler(addAttraction)
     }
 }
 

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4855DA4F2580406D00C5884B /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4855DA4E2580406D00C5884B /* Injector.swift */; };
+		4855DA5A2580D3B700C5884B /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4855DA592580D3B700C5884B /* Injector.swift */; };
 		4876EF98257EA01C009C9861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EF97257EA01C009C9861 /* AppDelegate.swift */; };
 		4876EF9A257EA01C009C9861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EF99257EA01C009C9861 /* SceneDelegate.swift */; };
 		4876EFA1257EA020009C9861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4876EFA0257EA020009C9861 /* Assets.xcassets */; };
@@ -41,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4855DA4E2580406D00C5884B /* Injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Injector.swift; path = "../../.Trash/ppvis-2/ppvis-2/Injector.swift"; sourceTree = "<group>"; };
+		4855DA592580D3B700C5884B /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Injector.swift; path = Controller/Injector.swift; sourceTree = "<group>"; };
 		4876EF94257EA01C009C9861 /* PPVIS_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPVIS_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4876EF97257EA01C009C9861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4876EF99257EA01C009C9861 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				4876EFAC257EA032009C9861 /* Controller */,
 				4876EFDB257EA04C009C9861 /* Main.storyboard */,
 				4876EFA0257EA020009C9861 /* Assets.xcassets */,
-				4855DA4E2580406D00C5884B /* Injector.swift */,
+				4855DA592580D3B700C5884B /* Injector.swift */,
 				4876EFA2257EA020009C9861 /* LaunchScreen.storyboard */,
 				4876EFA5257EA020009C9861 /* Info.plist */,
 			);
@@ -255,7 +255,6 @@
 				4876EFD1257EA03D009C9861 /* WorkingHours.swift in Sources */,
 				4876EFEB257EA060009C9861 /* ParkStatisticWindow.swift in Sources */,
 				4876EFE8257EA060009C9861 /* MainMenuWindow.swift in Sources */,
-				4855DA4F2580406D00C5884B /* Injector.swift in Sources */,
 				4876EFD5257EA03D009C9861 /* Worker.swift in Sources */,
 				4876EFD3257EA03D009C9861 /* AttractionWorker.swift in Sources */,
 				4876EF98257EA01C009C9861 /* AppDelegate.swift in Sources */,
@@ -270,6 +269,7 @@
 				4876EFCF257EA03D009C9861 /* AmusementPark.swift in Sources */,
 				4876EFCC257EA03D009C9861 /* Attraction.swift in Sources */,
 				4876EF9A257EA01C009C9861 /* SceneDelegate.swift in Sources */,
+				4855DA5A2580D3B700C5884B /* Injector.swift in Sources */,
 				4876EFBA257EA032009C9861 /* EventOrganizer.swift in Sources */,
 				4876EFEA257EA060009C9861 /* WorkerWindow.swift in Sources */,
 			);

@@ -9,10 +9,10 @@ import Foundation
 
 class ParkStatisticGetter {
     let amusementPark: AmusementPark
-    let mainMenu: MainMenuWindow
+    let authorizationWindow: AuthorizationWindow
     
-    init(mainMenu: MainMenuWindow, amusementPark: AmusementPark) {
-        self.mainMenu = mainMenu
+    init(authorizationWindow: AuthorizationWindow, amusementPark: AmusementPark) {
+        self.authorizationWindow = authorizationWindow
         self.amusementPark = amusementPark
         execute()
     }
@@ -28,6 +28,6 @@ class ParkStatisticGetter {
     }
     
     func execute() {
-        mainMenu.parkStatisticWindow.setLabels(dayProfit: getStatistic().0, monthProfit: getStatistic().1)
+        authorizationWindow.mainMenuWindow.parkStatisticWindow.setLabels(dayProfit: getStatistic().0, monthProfit: getStatistic().1)
     }
 }

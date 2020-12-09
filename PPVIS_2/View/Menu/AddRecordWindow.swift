@@ -58,15 +58,7 @@ class AddRecordWindow: UIViewController {
       @IBAction func addAttractionButtonPressed(_ sender: Any) {
         addAttractionButtonHandler?()
       }
-    
-//    func getAddAttractionButton()-> UIButton {
-//        return addWorkerButtonHandler
-//    }
-    
-//    func getAddWorkerButton()-> UIButton {
-//        return addWorkerButton
-//    }
-    
+
     func getWorkerName()-> String {
         return workerNameTextField.text ?? "unknown"
     }

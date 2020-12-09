@@ -114,7 +114,7 @@
         <!--Main Menu Window-->
         <scene sceneID="PQq-r2-LQw">
             <objects>
-                <viewController id="bki-EA-ptC" customClass="MainMenuWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuWindow" id="bki-EA-ptC" customClass="MainMenuWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ec7-7d-oRr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +239,7 @@
         <!--Add Record Window-->
         <scene sceneID="llS-zP-HBH">
             <objects>
-                <viewController id="FB5-vL-9jM" customClass="AddRecordWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddRecordWindow" id="FB5-vL-9jM" customClass="AddRecordWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vOa-HY-Xx3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +330,9 @@
                                         <state key="normal" title="OK">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addWorkerButtonPressed:" destination="FB5-vL-9jM" eventType="touchUpInside" id="Yfw-kx-BS0"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Working hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpT-pd-WFt">
                                         <rect key="frame" x="37" y="207" width="111" height="21"/>
@@ -486,6 +489,9 @@
                                         <state key="normal" title="OK">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addAttractionButtonPressed:" destination="FB5-vL-9jM" eventType="touchUpInside" id="vPx-3T-VSB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -557,7 +563,7 @@
         <!--Worker Window-->
         <scene sceneID="c4t-OT-0Vb">
             <objects>
-                <viewController id="l9a-J0-HMf" customClass="WorkerWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkerWindow" id="l9a-J0-HMf" customClass="WorkerWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6nj-wY-qZT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -705,7 +711,7 @@
         <!--Attraction Window-->
         <scene sceneID="7SM-ND-cmb">
             <objects>
-                <viewController id="XEy-fe-DTU" customClass="AttractionWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AttractionWindow" id="XEy-fe-DTU" customClass="AttractionWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgd-1c-DPC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -861,7 +867,7 @@
         <!--Park Statistic Window-->
         <scene sceneID="m9h-Ei-U1H">
             <objects>
-                <viewController id="RVQ-g6-xnn" customClass="ParkStatisticWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ParkStatisticWindow" id="RVQ-g6-xnn" customClass="ParkStatisticWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MwG-TW-j0j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -879,15 +885,15 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-Zk-2Zm">
-                                <rect key="frame" x="166" y="327" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5a-FX-0L2">
+                                <rect key="frame" x="164" y="301" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jc-8R-40k">
-                                <rect key="frame" x="166" y="408" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irH-cr-Luj">
+                                <rect key="frame" x="164" y="371" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -902,8 +908,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dayProfitLabel" destination="1Jc-8R-40k" id="qIA-uG-IK1"/>
-                        <outlet property="monthProfitLabel" destination="ZMQ-Zk-2Zm" id="IXD-KT-LuH"/>
+                        <outlet property="dayProfitLabel" destination="f5a-FX-0L2" id="adt-zq-xpW"/>
+                        <outlet property="monthProfitLabel" destination="irH-cr-Luj" id="TBh-67-oEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWw-cR-tXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -913,7 +919,7 @@
         <!--Event Window-->
         <scene sceneID="nwz-87-SZl">
             <objects>
-                <viewController id="my6-MP-Uvp" customClass="EventWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventWindow" id="my6-MP-Uvp" customClass="EventWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9yM-aW-Ki8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

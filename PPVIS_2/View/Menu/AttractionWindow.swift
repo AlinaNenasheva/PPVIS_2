@@ -9,13 +9,6 @@ import UIKit
 
 class AttractionWindow: UIViewController {
 
-//    @IBOutlet weak var closeAttractionButton: UIButton!
-//    @IBOutlet weak var changePriceButton: UIButton!
-//    @IBOutlet weak var openAttractionButton: UIButton!
-//    @IBOutlet weak var analyzePopularityButton: UIButton!
-//    @IBOutlet weak var statisticButton: UIButton!
-//    @IBOutlet weak var addTicketsButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -79,30 +72,6 @@ class AttractionWindow: UIViewController {
       @IBAction func addTicketsButtonPressed(_ sender: Any) {
         addTicketsButtonHandler?()
       }
-    
-//    func getCloseButton()-> UIButton {
-//        return closeAttractionButton
-//    }
-    
-//    func getOpenButton()-> UIButton {
-//        return openAttractionButton
-//    }
-//
-//    func getChangePriceButton()-> UIButton {
-//        return changePriceButton
-//    }
-//
-//    func getAnalyzePopularityButton()-> UIButton {
-//        return analyzePopularityButton
-//    }
-    
-//    func getStatisticButton()-> UIButton {
-//        return statisticButton
-//    }
-//
-//    func getAddTicketsButton()-> UIButton {
-//        return addTicketsButton
-//    }
     
     func createCloseDialog()-> (Int, String) {
         var reasonNumber = 0
