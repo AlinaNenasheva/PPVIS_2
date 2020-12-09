@@ -7,21 +7,26 @@
 
 import UIKit
 
-class MainMenu: UIViewController {
+class MainMenuWindow: UIViewController {
     
     @IBOutlet weak var manipulateWorkerButton: UIButton!
     @IBOutlet weak var manipulateAttractionButton: UIButton!
     @IBOutlet weak var addRecordButton: UIButton!
     @IBOutlet weak var parkStatisticButton: UIButton!
     @IBOutlet weak var organizeEventButton: UIButton!
-    let workerWindow = WorkerWindow()
-    let attractionWindow = AttractionWindow()
-    let eventWindow = EventWindow()
-    let parkStatisticWindow = ParkStatisticWindow()
-    let addRecordWindow = AddRecordWindow()
+    var workerWindow = WorkerWindow()
+    var attractionWindow = AttractionWindow()
+    var eventWindow = EventWindow()
+    var parkStatisticWindow = ParkStatisticWindow()
+    var addRecordWindow = AddRecordWindow()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        workerWindow = storyboard?.instantiateViewController(identifier: String(describing: WorkerWindow.self)) as! WorkerWindow
+        attractionWindow = storyboard?.instantiateViewController(identifier: String(describing: AttractionWindow.self)) as! AttractionWindow
+        eventWindow = storyboard?.instantiateViewController(identifier: String(describing: EventWindow.self)) as! EventWindow
+        parkStatisticWindow = storyboard?.instantiateViewController(identifier: String(describing: ParkStatisticWindow.self)) as! ParkStatisticWindow
+        addRecordWindow = storyboard?.instantiateViewController(identifier: String(describing: AddRecordWindow.self)) as! AddRecordWindow
 
     }
 

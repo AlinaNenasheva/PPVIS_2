@@ -9,7 +9,7 @@ import UIKit
 
 class EventWindow: UIViewController {
 
-    @IBOutlet weak var createEventButton: UIButton!
+//    @IBOutlet weak var createEventButton: UIButton!
     @IBOutlet weak var numberOfGuestsTextField: UITextField!
     @IBOutlet weak var dateOfEventPicker: UIDatePicker!
     @IBOutlet weak var menuTextView: UITextView!
@@ -19,9 +19,19 @@ class EventWindow: UIViewController {
 
     }
 
-    func getCreateButton()->UIButton {
-        return createEventButton
-    }
+    private var createButtonHandler: (() -> ())?
+      
+      func setCreateButtonHandler(_ handler: @escaping () -> ()) {
+          createButtonHandler = handler
+      }
+      
+      @IBAction func createButtonPressed(_ sender: Any) {
+        createButtonHandler?()
+      }
+    
+//    func getCreateButton()->UIButton {
+//        return createEventButton
+//    }
     
     func getDateFromDatePicker()-> Date {
         return dateOfEventPicker.date

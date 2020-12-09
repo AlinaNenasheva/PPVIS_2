@@ -1,10 +1,3 @@
-//
-//  AuthorizationWindow.swift
-//  ppvis-2
-//
-//  Created by Алина Ненашева on 2.12.20.
-//
-
 import UIKit
 
 class AuthorizationWindow: UIViewController {
@@ -15,10 +8,11 @@ class AuthorizationWindow: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-    let mainMenu = MainMenu()
+    var mainMenuWindow = MainMenuWindow()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainMenuWindow = storyboard?.instantiateViewController(identifier: String(describing: MainMenuWindow.self)) as! MainMenuWindow
         passwordTextField.isSecureTextEntry = true
     }
     
@@ -30,12 +24,19 @@ class AuthorizationWindow: UIViewController {
         return loginTextField.text ?? ""
     }
     
-    func getSubmitButton()-> UIButton {
-        return submitButton
-    }
+    private var submitButtonHandler: (() -> ())?
+      
+      func setSubmitButtonHandler(_ handler: @escaping () -> ()) {
+          submitButtonHandler = handler
+      }
+      
+      @IBAction func submitButtonPressed(_ sender: Any) {
+          submitButtonHandler?()
+      }
+
     
     func presentMainMenu() {
-        present(mainMenu, animated: true)
+        present(mainMenuWindow, animated: true)
     }
 }
 

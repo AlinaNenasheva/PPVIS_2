@@ -9,40 +9,100 @@ import UIKit
 
 class AttractionWindow: UIViewController {
 
-    @IBOutlet weak var closeAttractionButton: UIButton!
-    @IBOutlet weak var changePriceButton: UIButton!
-    @IBOutlet weak var openAttractionButton: UIButton!
-    @IBOutlet weak var analyzePopularityButton: UIButton!
-    @IBOutlet weak var statisticButton: UIButton!
-    @IBOutlet weak var addTicketsButton: UIButton!
+//    @IBOutlet weak var closeAttractionButton: UIButton!
+//    @IBOutlet weak var changePriceButton: UIButton!
+//    @IBOutlet weak var openAttractionButton: UIButton!
+//    @IBOutlet weak var analyzePopularityButton: UIButton!
+//    @IBOutlet weak var statisticButton: UIButton!
+//    @IBOutlet weak var addTicketsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func getCloseButton()-> UIButton {
-        return closeAttractionButton
-    }
+    private var closeButtonHandler: (() -> ())?
+      
+      func setCloseButtonHandler(_ handler: @escaping () -> ()) {
+          closeButtonHandler = handler
+      }
+      
+      @IBAction func closeButtonPressed(_ sender: Any) {
+          closeButtonHandler?()
+      }
     
-    func getOpenButton()-> UIButton {
-        return openAttractionButton
-    }
+    private var openButtonHandler: (() -> ())?
+      
+      func setOpenButtonHandler(_ handler: @escaping () -> ()) {
+          openButtonHandler = handler
+      }
+      
+      @IBAction func openButtonPressed(_ sender: Any) {
+          openButtonHandler?()
+      }
     
-    func getChangePriceButton()-> UIButton {
-        return changePriceButton
-    }
+    private var changePriceButtonHandler: (() -> ())?
+      
+      func setoChangePriceButtonHandler(_ handler: @escaping () -> ()) {
+          changePriceButtonHandler = handler
+      }
+      
+      @IBAction func changePriceButtonPressed(_ sender: Any) {
+        changePriceButtonHandler?()
+      }
     
-    func getAnalyzePopularityButton()-> UIButton {
-        return analyzePopularityButton
-    }
+    private var analyzeButtonHandler: (() -> ())?
+      
+      func setAnalyzeButtonHandler(_ handler: @escaping () -> ()) {
+          analyzeButtonHandler = handler
+      }
+      
+      @IBAction func analyzeButtonPressed(_ sender: Any) {
+        analyzeButtonHandler?()
+      }
     
-    func getStatisticButton()-> UIButton {
-        return statisticButton
-    }
+    private var statisticButtonHandler: (() -> ())?
+      
+      func setStatisticeButtonHandler(_ handler: @escaping () -> ()) {
+          statisticButtonHandler = handler
+      }
+      
+      @IBAction func statisticButtonPressed(_ sender: Any) {
+        statisticButtonHandler?()
+      }
     
-    func getAddTicketsButton()-> UIButton {
-        return addTicketsButton
-    }
+    private var addTicketsButtonHandler: (() -> ())?
+      
+      func setAddTicketsButtonHandler(_ handler: @escaping () -> ()) {
+          addTicketsButtonHandler = handler
+      }
+      
+      @IBAction func addTicketsButtonPressed(_ sender: Any) {
+        addTicketsButtonHandler?()
+      }
+    
+//    func getCloseButton()-> UIButton {
+//        return closeAttractionButton
+//    }
+    
+//    func getOpenButton()-> UIButton {
+//        return openAttractionButton
+//    }
+//
+//    func getChangePriceButton()-> UIButton {
+//        return changePriceButton
+//    }
+//
+//    func getAnalyzePopularityButton()-> UIButton {
+//        return analyzePopularityButton
+//    }
+    
+//    func getStatisticButton()-> UIButton {
+//        return statisticButton
+//    }
+//
+//    func getAddTicketsButton()-> UIButton {
+//        return addTicketsButton
+//    }
     
     func createCloseDialog()-> (Int, String) {
         var reasonNumber = 0

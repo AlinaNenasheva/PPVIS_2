@@ -7,18 +7,19 @@
 
 import Foundation
 
-class EventOrganizer: Controller {
+class EventOrganizer {
     let amusementPark: AmusementPark
-    let mainMenu: MainMenu
+    let mainMenu: MainMenuWindow
     
-    init(amusementPark: AmusementPark, mainMenu: MainMenu) {
+    init(amusementPark: AmusementPark, mainMenu: MainMenuWindow) {
         self.amusementPark = amusementPark
         self.mainMenu = mainMenu
         execute()
     }
     
     func execute() {
-        mainMenu.eventWindow.getCreateButton().addTarget(self, action: #selector(setEvent), for: .touchUpInside)
+        mainMenu.eventWindow.setCreateButtonHandler(setEvent)
+//        mainMenu.eventWindow.getCreateButton().addTarget(self, action: #selector(setEvent), for: .touchUpInside)
     }
     
     @objc func setEvent(){

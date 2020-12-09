@@ -13,7 +13,7 @@ class Autotimer {
     
     func updateTimer() {
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.timer = +1
+            self.timer += 1
         }
     }
 }

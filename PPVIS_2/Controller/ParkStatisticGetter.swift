@@ -7,11 +7,11 @@
 
 import Foundation
 
-class ParkStatisticGetter: Controller {
+class ParkStatisticGetter {
     let amusementPark: AmusementPark
-    let mainMenu: MainMenu
+    let mainMenu: MainMenuWindow
     
-    init(mainMenu: MainMenu, amusementPark: AmusementPark) {
+    init(mainMenu: MainMenuWindow, amusementPark: AmusementPark) {
         self.mainMenu = mainMenu
         self.amusementPark = amusementPark
         execute()

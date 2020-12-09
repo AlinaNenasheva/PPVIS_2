@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4855DA4F2580406D00C5884B /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4855DA4E2580406D00C5884B /* Injector.swift */; };
 		4876EF98257EA01C009C9861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EF97257EA01C009C9861 /* AppDelegate.swift */; };
 		4876EF9A257EA01C009C9861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EF99257EA01C009C9861 /* SceneDelegate.swift */; };
-		4876EF9C257EA01C009C9861 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EF9B257EA01C009C9861 /* ViewController.swift */; };
 		4876EFA1257EA020009C9861 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4876EFA0257EA020009C9861 /* Assets.xcassets */; };
 		4876EFA4257EA020009C9861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4876EFA2257EA020009C9861 /* LaunchScreen.storyboard */; };
 		4876EFB5257EA032009C9861 /* ParkStatisticGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFAD257EA032009C9861 /* ParkStatisticGetter.swift */; };
 		4876EFB6257EA032009C9861 /* WorkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFAE257EA032009C9861 /* WorkerController.swift */; };
 		4876EFB7257EA032009C9861 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFAF257EA032009C9861 /* WeatherService.swift */; };
-		4876EFB8257EA032009C9861 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFB0257EA032009C9861 /* Controller.swift */; };
 		4876EFB9257EA032009C9861 /* Verifyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFB1257EA032009C9861 /* Verifyer.swift */; };
 		4876EFBA257EA032009C9861 /* EventOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFB2257EA032009C9861 /* EventOrganizer.swift */; };
 		4876EFBC257EA032009C9861 /* AttractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFB4257EA032009C9861 /* AttractionController.swift */; };
@@ -31,9 +30,8 @@
 		4876EFD4257EA03D009C9861 /* PayCheckRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFC8257EA03D009C9861 /* PayCheckRecord.swift */; };
 		4876EFD5257EA03D009C9861 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFC9257EA03D009C9861 /* Worker.swift */; };
 		4876EFD6257EA03D009C9861 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFCA257EA03D009C9861 /* Application.swift */; };
-		4876EFD9257EA042009C9861 /* Autotimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFD8257EA042009C9861 /* Autotimer.swift */; };
 		4876EFDC257EA04C009C9861 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4876EFDB257EA04C009C9861 /* Main.storyboard */; };
-		4876EFE8257EA060009C9861 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFE0257EA05F009C9861 /* MainMenu.swift */; };
+		4876EFE8257EA060009C9861 /* MainMenuWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFE0257EA05F009C9861 /* MainMenuWindow.swift */; };
 		4876EFE9257EA060009C9861 /* AuthorizationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFE1257EA05F009C9861 /* AuthorizationWindow.swift */; };
 		4876EFEA257EA060009C9861 /* WorkerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFE3257EA05F009C9861 /* WorkerWindow.swift */; };
 		4876EFEB257EA060009C9861 /* ParkStatisticWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4876EFE4257EA05F009C9861 /* ParkStatisticWindow.swift */; };
@@ -43,17 +41,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4855DA4E2580406D00C5884B /* Injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Injector.swift; path = "../../.Trash/ppvis-2/ppvis-2/Injector.swift"; sourceTree = "<group>"; };
 		4876EF94257EA01C009C9861 /* PPVIS_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPVIS_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4876EF97257EA01C009C9861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4876EF99257EA01C009C9861 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4876EF9B257EA01C009C9861 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4876EFA0257EA020009C9861 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4876EFA3257EA020009C9861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4876EFA5257EA020009C9861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4876EFAD257EA032009C9861 /* ParkStatisticGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkStatisticGetter.swift; sourceTree = "<group>"; };
 		4876EFAE257EA032009C9861 /* WorkerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerController.swift; sourceTree = "<group>"; };
 		4876EFAF257EA032009C9861 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
-		4876EFB0257EA032009C9861 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		4876EFB1257EA032009C9861 /* Verifyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verifyer.swift; sourceTree = "<group>"; };
 		4876EFB2257EA032009C9861 /* EventOrganizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrganizer.swift; sourceTree = "<group>"; };
 		4876EFB4257EA032009C9861 /* AttractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttractionController.swift; sourceTree = "<group>"; };
@@ -69,9 +66,8 @@
 		4876EFC8257EA03D009C9861 /* PayCheckRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayCheckRecord.swift; sourceTree = "<group>"; };
 		4876EFC9257EA03D009C9861 /* Worker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		4876EFCA257EA03D009C9861 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		4876EFD8257EA042009C9861 /* Autotimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autotimer.swift; sourceTree = "<group>"; };
 		4876EFDB257EA04C009C9861 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4876EFE0257EA05F009C9861 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		4876EFE0257EA05F009C9861 /* MainMenuWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuWindow.swift; sourceTree = "<group>"; };
 		4876EFE1257EA05F009C9861 /* AuthorizationWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationWindow.swift; sourceTree = "<group>"; };
 		4876EFE3257EA05F009C9861 /* WorkerWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerWindow.swift; sourceTree = "<group>"; };
 		4876EFE4257EA05F009C9861 /* ParkStatisticWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkStatisticWindow.swift; sourceTree = "<group>"; };
@@ -113,12 +109,11 @@
 				4876EF97257EA01C009C9861 /* AppDelegate.swift */,
 				4876EF99257EA01C009C9861 /* SceneDelegate.swift */,
 				4876EFBE257EA03D009C9861 /* Data */,
-				4876EF9B257EA01C009C9861 /* ViewController.swift */,
-				4876EFD8257EA042009C9861 /* Autotimer.swift */,
 				4876EFDF257EA05F009C9861 /* View */,
 				4876EFAC257EA032009C9861 /* Controller */,
 				4876EFDB257EA04C009C9861 /* Main.storyboard */,
 				4876EFA0257EA020009C9861 /* Assets.xcassets */,
+				4855DA4E2580406D00C5884B /* Injector.swift */,
 				4876EFA2257EA020009C9861 /* LaunchScreen.storyboard */,
 				4876EFA5257EA020009C9861 /* Info.plist */,
 			);
@@ -131,7 +126,6 @@
 				4876EFAD257EA032009C9861 /* ParkStatisticGetter.swift */,
 				4876EFAE257EA032009C9861 /* WorkerController.swift */,
 				4876EFAF257EA032009C9861 /* WeatherService.swift */,
-				4876EFB0257EA032009C9861 /* Controller.swift */,
 				4876EFB1257EA032009C9861 /* Verifyer.swift */,
 				4876EFB2257EA032009C9861 /* EventOrganizer.swift */,
 				4876EFB4257EA032009C9861 /* AttractionController.swift */,
@@ -161,7 +155,7 @@
 		4876EFDF257EA05F009C9861 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4876EFE0257EA05F009C9861 /* MainMenu.swift */,
+				4876EFE0257EA05F009C9861 /* MainMenuWindow.swift */,
 				4876EFE1257EA05F009C9861 /* AuthorizationWindow.swift */,
 				4876EFE2257EA05F009C9861 /* Menu */,
 			);
@@ -251,18 +245,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4876EFBC257EA032009C9861 /* AttractionController.swift in Sources */,
-				4876EF9C257EA01C009C9861 /* ViewController.swift in Sources */,
 				4876EFED257EA060009C9861 /* AttractionWindow.swift in Sources */,
 				4876EFB5257EA032009C9861 /* ParkStatisticGetter.swift in Sources */,
 				4876EFCD257EA03D009C9861 /* PayCheck.swift in Sources */,
 				4876EFEC257EA060009C9861 /* AddRecordWindow.swift in Sources */,
-				4876EFD9257EA042009C9861 /* Autotimer.swift in Sources */,
 				4876EFCE257EA03D009C9861 /* WeatherCondition.swift in Sources */,
 				4876EFD4257EA03D009C9861 /* PayCheckRecord.swift in Sources */,
 				4876EFB6257EA032009C9861 /* WorkerController.swift in Sources */,
 				4876EFD1257EA03D009C9861 /* WorkingHours.swift in Sources */,
 				4876EFEB257EA060009C9861 /* ParkStatisticWindow.swift in Sources */,
-				4876EFE8257EA060009C9861 /* MainMenu.swift in Sources */,
+				4876EFE8257EA060009C9861 /* MainMenuWindow.swift in Sources */,
+				4855DA4F2580406D00C5884B /* Injector.swift in Sources */,
 				4876EFD5257EA03D009C9861 /* Worker.swift in Sources */,
 				4876EFD3257EA03D009C9861 /* AttractionWorker.swift in Sources */,
 				4876EF98257EA01C009C9861 /* AppDelegate.swift in Sources */,
@@ -277,7 +270,6 @@
 				4876EFCF257EA03D009C9861 /* AmusementPark.swift in Sources */,
 				4876EFCC257EA03D009C9861 /* Attraction.swift in Sources */,
 				4876EF9A257EA01C009C9861 /* SceneDelegate.swift in Sources */,
-				4876EFB8257EA032009C9861 /* Controller.swift in Sources */,
 				4876EFBA257EA032009C9861 /* EventOrganizer.swift in Sources */,
 				4876EFEA257EA060009C9861 /* WorkerWindow.swift in Sources */,
 			);

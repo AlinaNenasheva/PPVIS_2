@@ -67,6 +67,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xai-hM-XDX"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Tr-MI-wS7">
                                 <rect key="frame" x="120" y="345" width="174" height="34"/>
@@ -108,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="-146.37681159420291" y="93.75"/>
         </scene>
-        <!--Main Menu-->
+        <!--Main Menu Window-->
         <scene sceneID="PQq-r2-LQw">
             <objects>
-                <viewController id="bki-EA-ptC" customClass="MainMenu" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bki-EA-ptC" customClass="MainMenuWindow" customModule="PPVIS_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ec7-7d-oRr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,6 +132,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onShowWorkerWindowButtonPressed:" destination="bki-EA-ptC" eventType="touchUpInside" id="EC3-KO-Lkk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thR-hW-OED">
                                 <rect key="frame" x="66" y="235" width="282" height="41"/>
@@ -142,6 +148,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onShowAttractionWindowButtonPressed:" destination="bki-EA-ptC" eventType="touchUpInside" id="0dJ-hS-P7P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44p-At-AH1">
                                 <rect key="frame" x="131" y="326" width="152" height="41"/>
@@ -155,6 +164,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onShowAddRecordWindowButtonPressed:" destination="bki-EA-ptC" eventType="touchUpInside" id="3gB-pJ-aJZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iUu-kg-TXv">
                                 <rect key="frame" x="119.5" y="417" width="175" height="41"/>
@@ -168,6 +180,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onShowStatisticWindowButtonPressed:" destination="bki-EA-ptC" eventType="touchUpInside" id="Cbm-6O-ZvA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="At9-Oc-ezG">
                                 <rect key="frame" x="20" y="64" width="66" height="35"/>
@@ -194,6 +209,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="onShowEventOrganizationWindowButtonPressed:" destination="bki-EA-ptC" eventType="touchUpInside" id="VdH-gd-dXG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UQj-rd-9rM"/>
@@ -557,6 +575,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="letButtonPressed:" destination="l9a-J0-HMf" eventType="touchUpInside" id="3ZC-WQ-at4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AuU-i3-xbl">
                                 <rect key="frame" x="116" y="235" width="182" height="41"/>
@@ -571,6 +592,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="l9a-J0-HMf" eventType="touchUpInside" id="zQX-Z7-IG1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="URf-Fz-vyq">
                                 <rect key="frame" x="107.5" y="326" width="199" height="41"/>
@@ -585,6 +609,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="rewardButtonPressed:" destination="l9a-J0-HMf" eventType="touchUpInside" id="eA2-T0-kiu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJ9-oB-2Ja">
                                 <rect key="frame" x="126.5" y="417" width="161" height="41"/>
@@ -599,6 +626,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="fineButtonPressed:" destination="l9a-J0-HMf" eventType="touchUpInside" id="jlW-IE-xhD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taj-QB-htl">
                                 <rect key="frame" x="20" y="64" width="66" height="35"/>
@@ -626,6 +656,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="changePlaceButtonPressed:" destination="l9a-J0-HMf" eventType="touchUpInside" id="WPx-sz-ZSy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NPI-fD-CWC">
                                 <rect key="frame" x="91.5" y="599" width="231" height="41"/>
@@ -640,6 +673,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="changeHoursButtonPressed:" destination="l9a-J0-HMf" eventType="touchUpInside" id="Fec-md-oUo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jbs-vS-iqF"/>
@@ -689,6 +725,7 @@
                                 </state>
                                 <connections>
                                     <action selector="closeAttractionButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="fic-me-yAG"/>
+                                    <action selector="closeButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="i68-Vd-ZNs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7K-Jh-k8v">
@@ -704,6 +741,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="openButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="RiE-ha-eH2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nB-v6-1a1">
                                 <rect key="frame" x="121" y="326" width="172" height="41"/>
@@ -718,6 +758,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="changePriceButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="AIF-Fm-dTE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqk-SU-tBl">
                                 <rect key="frame" x="84" y="417" width="246" height="41"/>
@@ -732,6 +775,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="analyzeButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="eEb-hl-5ml"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QoC-JB-05p">
                                 <rect key="frame" x="20" y="64" width="66" height="35"/>
@@ -759,6 +805,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="statisticButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="qsv-cQ-QX9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-cv-hi0">
                                 <rect key="frame" x="122" y="595" width="172" height="41"/>
@@ -774,6 +823,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="addTicketsButtonPressed:" destination="XEy-fe-DTU" eventType="touchUpInside" id="P8Y-7X-XgS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M2H-i9-4hq"/>
@@ -850,8 +902,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dayProfitLabel" destination="1Jc-8R-40k" id="CTY-KS-kKn"/>
-                        <outlet property="monthProfitLabel" destination="ZMQ-Zk-2Zm" id="1Vn-B7-l4M"/>
+                        <outlet property="dayProfitLabel" destination="1Jc-8R-40k" id="qIA-uG-IK1"/>
+                        <outlet property="monthProfitLabel" destination="ZMQ-Zk-2Zm" id="IXD-KT-LuH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWw-cR-tXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -938,6 +990,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="createButtonPressed:" destination="my6-MP-Uvp" eventType="touchUpInside" id="nJe-vj-Jut"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="hJy-gB-6Q8">
                                 <rect key="frame" x="0.0" y="296" width="414" height="162"/>
@@ -963,7 +1018,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circle" catalog="system" width="32" height="32"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

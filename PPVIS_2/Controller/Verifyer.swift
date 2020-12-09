@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Verifyer: Controller {
-    let authorizationWindow: AuthorizationWindow
+class Verifyer {
+    weak var authorizationWindow: AuthorizationWindow?
     
     init(authorizationWindow: AuthorizationWindow) {
         self.authorizationWindow = authorizationWindow
@@ -16,7 +16,7 @@ class Verifyer: Controller {
     }
     
     func execute() {
-        authorizationWindow.getSubmitButton().addTarget(self, action: #selector(verifyPasswordForEntrance), for: .touchUpInside)
+        authorizationWindow?.setSubmitButtonHandler(verifyPasswordForEntrance)
 //        verifyPasswordFo(login: authorizationWindow.getLoginTextField(), password: authorizationWindow.getPasswordTextField())
     }
     
@@ -31,10 +31,10 @@ class Verifyer: Controller {
     }
     
     @objc func verifyPasswordForEntrance() {
-        let inputLogin = authorizationWindow.getLoginTextField()
-        let inputPassword = authorizationWindow.getPasswordTextField()
+        let inputLogin = authorizationWindow?.getLoginTextField()
+        let inputPassword = authorizationWindow?.getPasswordTextField()
         if getLogin() == inputLogin &&  getPassword() == inputPassword {
-            authorizationWindow.presentMainMenu()
+            authorizationWindow?.presentMainMenu()
         }
     }
     

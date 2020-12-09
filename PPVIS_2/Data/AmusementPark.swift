@@ -28,7 +28,17 @@ class AmusementPark {
         }
     }
     
-    
+    func autocountPrices() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (_) in
+            if Date() == Date().startOfMonth {
+                //imagine connecting to some exchange rate API and calculating some scale value
+                let scale = 1.0
+                for attraction in self.attractions {
+                    attraction.price = attraction.price * scale
+                }
+            }
+        }
+    }
 }
 
 extension Date {
